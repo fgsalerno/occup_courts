@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dia hora inicio:</strong>
+  <%= @occupation_court.dia_hora_inicio %>
+</p>
+
+<p>
+  <strong>Dia hora fin:</strong>
+  <%= @occupation_court.dia_hora_fin %>
+</p>
+
+<p>
+  <strong>Obsv:</strong>
+  <%= @occupation_court.obsv %>
+</p>
+
+<p>
+  <strong>Court:</strong>
+  <%= @occupation_court.court %>
+</p>
+
+<p>
+  <strong>Partner:</strong>
+  <%= @occupation_court.partner %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @occupation_court.employee %>
+</p>
+
+<%= link_to 'Edit', edit_occupation_court_path(@occupation_court) %> |
+<%= link_to 'Back', occupation_courts_path %>

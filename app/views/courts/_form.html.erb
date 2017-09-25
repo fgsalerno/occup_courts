@@ -1,0 +1,27 @@
+<%= form_with(model: court, local: true) do |form| %>
+  <% if court.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(court.errors.count, "error") %> prohibited this court from being saved:</h2>
+
+      <ul>
+      <% court.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :court_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :observacion %>
+    <%= form.text_field :observacion, id: :court_observacion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

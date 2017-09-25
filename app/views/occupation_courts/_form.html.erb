@@ -1,0 +1,57 @@
+<%= form_with(model: occupation_court, local: true) do |form| %>
+  <% if occupation_court.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(occupation_court.errors.count, "error") %> prohibited this occupation_court from being saved:</h2>
+
+      <ul>
+      <% occupation_court.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :dia_hora_inicio %>
+    <%= form.datetime_select :dia_hora_inicio, id: :occupation_court_dia_hora_inicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dia_hora_fin %>
+    <%= form.datetime_select :dia_hora_fin, id: :occupation_court_dia_hora_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :importe %>
+    <%= form.text_field :importe, id: :occupation_court_importe %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pagado %>
+    <%= form.text_field :pagado, id: :occupation_court_pagado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :obsv %>
+    <%= form.text_field :obsv, id: :occupation_court_obsv %>
+  </div>
+
+  <div class="field">
+    <%= form.label :court_id %>
+    <%= collection_select(:occupation_court, :court_id, Court.all, :id, :nombre, prompt: true) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :partner_id %>
+    <%= collection_select(:occupation_court, :partner_id, Partner.all, :id, :desc, prompt: true) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= collection_select(:occupation_court, :employee_id, Employee.all, :id, :desc, prompt: true) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

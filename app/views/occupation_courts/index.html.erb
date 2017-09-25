@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Occupation Courts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dia hora inicio</th>
+      <th>Dia hora fin</th>
+      <th>Importe</th>
+      <th>Pagado</th>
+      <th>Obsv</th>
+      <th>Court</th>
+      <th>Partner</th>
+      <th>Employee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @occupation_courts.each do |occupation_court| %>
+      <tr>
+        <td><%= occupation_court.dia_hora_inicio %></td>
+        <td><%= occupation_court.dia_hora_fin %></td>
+        <td><%= occupation_court.importe %></td>
+        <td><%= occupation_court.pagado %></td>
+        <td><%= occupation_court.obsv %></td>
+        <td><%= occupation_court.court.nombre %></td>
+        <td><%= occupation_court.partner.person.ape_nombre %></td>
+        <td><%= occupation_court.employee.person.ape_nombre %></td>
+        <td><%= link_to 'Show', occupation_court %></td>
+        <td><%= link_to 'Edit', edit_occupation_court_path(occupation_court) %></td>
+        <td><%= link_to 'Destroy', occupation_court, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Occupation Court', new_occupation_court_path %>

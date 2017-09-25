@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ape_nombre: MyString
+  dni_cuil: 
+  email: MyString
+
+two:
+  ape_nombre: MyString
+  dni_cuil: 
+  email: MyString

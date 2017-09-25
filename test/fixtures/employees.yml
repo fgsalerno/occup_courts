@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  desc: MyString
+  employee_type: one
+  person: one
+
+two:
+  desc: MyString
+  employee_type: two
+  person: two

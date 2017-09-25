@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  dia_hora_inicio: 2017-09-08 09:48:53
+  dia_hora_fin: 2017-09-08 09:48:53
+  obsv: MyString
+  court: one
+  partner: one
+  employee: one
+
+two:
+  dia_hora_inicio: 2017-09-08 09:48:53
+  dia_hora_fin: 2017-09-08 09:48:53
+  obsv: MyString
+  court: two
+  partner: two
+  employee: two

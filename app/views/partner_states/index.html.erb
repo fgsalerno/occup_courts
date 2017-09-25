@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Partner States</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @partner_states.each do |partner_state| %>
+      <tr>
+        <td><%= partner_state.desc %></td>
+        <td><%= link_to 'Show', partner_state %></td>
+        <td><%= link_to 'Edit', edit_partner_state_path(partner_state) %></td>
+        <td><%= link_to 'Destroy', partner_state, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Partner State', new_partner_state_path %>
